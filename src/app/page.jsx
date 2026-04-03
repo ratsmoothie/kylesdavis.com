@@ -11,9 +11,8 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoLowes from '@/images/logos/Lowes.svg'
+import logoMusic from '@/images/logos/music.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -105,6 +104,7 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
+{/*
 function Newsletter() {
   return (
     <form
@@ -134,7 +134,7 @@ function Newsletter() {
       </div>
     </form>
   )
-}
+}*/}
 
 function Role({ role }) {
   let startLabel =
@@ -176,35 +176,28 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Lowes Companies Inc',
+      title: 'Sr. Analyst',
+      logo: logoLowes,
+      start: '2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Unify Sound Lab',
+      title: 'Recording Engineer',
+      logo: logoMusic,
+      start: '2018',
+      end: '2024',
     },
     {
       company: 'Starbucks',
-      title: 'Shift Supervisor',
+      title: 'Barista',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: '2017',
+      end: '2018',
     },
   ]
 
@@ -219,10 +212,10 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      {/*<Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button>*/}
     </div>
   )
 }
@@ -264,14 +257,13 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Musician, Recording Engineer, Programmer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I'm Kyle, a musician, programmer, and aspiring entrepreneur
+            based in Charlotte, NC. I'm exploring tech, music, and the future, one experiment at a time.
           </p>
+          {/*
           <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
@@ -290,6 +282,7 @@ export default async function Home() {
               icon={LinkedInIcon}
             />
           </div>
+          */}
         </div>
       </Container>
       <Photos />
@@ -301,7 +294,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/*<Newsletter />*/}
             <Resume />
           </div>
         </div>
